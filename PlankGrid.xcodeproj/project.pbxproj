@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A4FE2972103BA5700A173D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2962103BA5700A173D6 /* AppDelegate.swift */; };
+		7A4FE2992103BA5700A173D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2982103BA5700A173D6 /* ViewController.swift */; };
+		7A4FE29C2103BA5700A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE29A2103BA5700A173D6 /* Main.storyboard */; };
+		7A4FE29E2103BA5C00A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE29D2103BA5C00A173D6 /* Assets.xcassets */; };
+		7A4FE2A12103BA5C00A173D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE29F2103BA5C00A173D6 /* LaunchScreen.storyboard */; };
+		7A4FE2AC2103BA5C00A173D6 /* PlankGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2AB2103BA5C00A173D6 /* PlankGridTests.swift */; };
+		7A4FE2B72103BA5C00A173D6 /* PlankGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2B62103BA5C00A173D6 /* PlankGridUITests.swift */; };
+		7A4FE2BC2103BA5C00A173D6 /* PlankGrid WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7A4FE2BB2103BA5C00A173D6 /* PlankGrid WatchKit App.app */; };
+		7A4FE2C22103BA5C00A173D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE2C02103BA5C00A173D6 /* Interface.storyboard */; };
+		7A4FE2C42103BA5C00A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE2C32103BA5C00A173D6 /* Assets.xcassets */; };
+		7A4FE2CB2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A4FE2CA2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4FE2D02103BA5D00A173D6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2CF2103BA5D00A173D6 /* InterfaceController.swift */; };
+		7A4FE2D22103BA5D00A173D6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D12103BA5D00A173D6 /* ExtensionDelegate.swift */; };
+		7A4FE2D42103BA5D00A173D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D32103BA5D00A173D6 /* NotificationController.swift */; };
+		7A4FE2D62103BA5D00A173D6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D52103BA5D00A173D6 /* ComplicationController.swift */; };
+		7A4FE2D82103BA5D00A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D72103BA5D00A173D6 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A4FE2A82103BA5C00A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4FE28B2103BA5700A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4FE2922103BA5700A173D6;
+			remoteInfo = PlankGrid;
+		};
+		7A4FE2B32103BA5C00A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4FE28B2103BA5700A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4FE2922103BA5700A173D6;
+			remoteInfo = PlankGrid;
+		};
+		7A4FE2BD2103BA5C00A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4FE28B2103BA5700A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4FE2BA2103BA5C00A173D6;
+			remoteInfo = "PlankGrid WatchKit App";
+		};
+		7A4FE2CC2103BA5D00A173D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4FE28B2103BA5700A173D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4FE2C92103BA5D00A173D6;
+			remoteInfo = "PlankGrid WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A4FE2E02103BA5D00A173D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7A4FE2CB2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2E42103BA5D00A173D6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7A4FE2BC2103BA5C00A173D6 /* PlankGrid WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A4FE2932103BA5700A173D6 /* PlankGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4FE2962103BA5700A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A4FE2982103BA5700A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A4FE29B2103BA5700A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A4FE29D2103BA5C00A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A4FE2A02103BA5C00A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A4FE2A22103BA5C00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2A72103BA5C00A173D6 /* PlankGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlankGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4FE2AB2103BA5C00A173D6 /* PlankGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankGridTests.swift; sourceTree = "<group>"; };
+		7A4FE2AD2103BA5C00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2B22103BA5C00A173D6 /* PlankGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlankGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4FE2B62103BA5C00A173D6 /* PlankGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlankGridUITests.swift; sourceTree = "<group>"; };
+		7A4FE2B82103BA5C00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2BB2103BA5C00A173D6 /* PlankGrid WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlankGrid WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4FE2C12103BA5C00A173D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7A4FE2C32103BA5C00A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A4FE2C52103BA5C00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2CA2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PlankGrid WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4FE2CF2103BA5D00A173D6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7A4FE2D12103BA5D00A173D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		7A4FE2D32103BA5D00A173D6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7A4FE2D52103BA5D00A173D6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7A4FE2D72103BA5D00A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A4FE2D92103BA5D00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2DA2103BA5D00A173D6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A4FE2902103BA5700A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2A42103BA5C00A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2AF2103BA5C00A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2C72103BA5D00A173D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A4FE28A2103BA5700A173D6 = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2952103BA5700A173D6 /* PlankGrid */,
+				7A4FE2AA2103BA5C00A173D6 /* PlankGridTests */,
+				7A4FE2B52103BA5C00A173D6 /* PlankGridUITests */,
+				7A4FE2BF2103BA5C00A173D6 /* PlankGrid WatchKit App */,
+				7A4FE2CE2103BA5D00A173D6 /* PlankGrid WatchKit Extension */,
+				7A4FE2942103BA5700A173D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A4FE2942103BA5700A173D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2932103BA5700A173D6 /* PlankGrid.app */,
+				7A4FE2A72103BA5C00A173D6 /* PlankGridTests.xctest */,
+				7A4FE2B22103BA5C00A173D6 /* PlankGridUITests.xctest */,
+				7A4FE2BB2103BA5C00A173D6 /* PlankGrid WatchKit App.app */,
+				7A4FE2CA2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A4FE2952103BA5700A173D6 /* PlankGrid */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2962103BA5700A173D6 /* AppDelegate.swift */,
+				7A4FE2982103BA5700A173D6 /* ViewController.swift */,
+				7A4FE29A2103BA5700A173D6 /* Main.storyboard */,
+				7A4FE29D2103BA5C00A173D6 /* Assets.xcassets */,
+				7A4FE29F2103BA5C00A173D6 /* LaunchScreen.storyboard */,
+				7A4FE2A22103BA5C00A173D6 /* Info.plist */,
+			);
+			path = PlankGrid;
+			sourceTree = "<group>";
+		};
+		7A4FE2AA2103BA5C00A173D6 /* PlankGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2AB2103BA5C00A173D6 /* PlankGridTests.swift */,
+				7A4FE2AD2103BA5C00A173D6 /* Info.plist */,
+			);
+			path = PlankGridTests;
+			sourceTree = "<group>";
+		};
+		7A4FE2B52103BA5C00A173D6 /* PlankGridUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2B62103BA5C00A173D6 /* PlankGridUITests.swift */,
+				7A4FE2B82103BA5C00A173D6 /* Info.plist */,
+			);
+			path = PlankGridUITests;
+			sourceTree = "<group>";
+		};
+		7A4FE2BF2103BA5C00A173D6 /* PlankGrid WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2C02103BA5C00A173D6 /* Interface.storyboard */,
+				7A4FE2C32103BA5C00A173D6 /* Assets.xcassets */,
+				7A4FE2C52103BA5C00A173D6 /* Info.plist */,
+			);
+			path = "PlankGrid WatchKit App";
+			sourceTree = "<group>";
+		};
+		7A4FE2CE2103BA5D00A173D6 /* PlankGrid WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2CF2103BA5D00A173D6 /* InterfaceController.swift */,
+				7A4FE2D12103BA5D00A173D6 /* ExtensionDelegate.swift */,
+				7A4FE2D32103BA5D00A173D6 /* NotificationController.swift */,
+				7A4FE2D52103BA5D00A173D6 /* ComplicationController.swift */,
+				7A4FE2D72103BA5D00A173D6 /* Assets.xcassets */,
+				7A4FE2D92103BA5D00A173D6 /* Info.plist */,
+				7A4FE2DA2103BA5D00A173D6 /* PushNotificationPayload.apns */,
+			);
+			path = "PlankGrid WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A4FE2922103BA5700A173D6 /* PlankGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4FE2E52103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid" */;
+			buildPhases = (
+				7A4FE28F2103BA5700A173D6 /* Sources */,
+				7A4FE2902103BA5700A173D6 /* Frameworks */,
+				7A4FE2912103BA5700A173D6 /* Resources */,
+				7A4FE2E42103BA5D00A173D6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A4FE2BE2103BA5C00A173D6 /* PBXTargetDependency */,
+			);
+			name = PlankGrid;
+			productName = PlankGrid;
+			productReference = 7A4FE2932103BA5700A173D6 /* PlankGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A4FE2A62103BA5C00A173D6 /* PlankGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4FE2E82103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGridTests" */;
+			buildPhases = (
+				7A4FE2A32103BA5C00A173D6 /* Sources */,
+				7A4FE2A42103BA5C00A173D6 /* Frameworks */,
+				7A4FE2A52103BA5C00A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A4FE2A92103BA5C00A173D6 /* PBXTargetDependency */,
+			);
+			name = PlankGridTests;
+			productName = PlankGridTests;
+			productReference = 7A4FE2A72103BA5C00A173D6 /* PlankGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A4FE2B12103BA5C00A173D6 /* PlankGridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4FE2EB2103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGridUITests" */;
+			buildPhases = (
+				7A4FE2AE2103BA5C00A173D6 /* Sources */,
+				7A4FE2AF2103BA5C00A173D6 /* Frameworks */,
+				7A4FE2B02103BA5C00A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A4FE2B42103BA5C00A173D6 /* PBXTargetDependency */,
+			);
+			name = PlankGridUITests;
+			productName = PlankGridUITests;
+			productReference = 7A4FE2B22103BA5C00A173D6 /* PlankGridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7A4FE2BA2103BA5C00A173D6 /* PlankGrid WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4FE2E12103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid WatchKit App" */;
+			buildPhases = (
+				7A4FE2B92103BA5C00A173D6 /* Resources */,
+				7A4FE2E02103BA5D00A173D6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A4FE2CD2103BA5D00A173D6 /* PBXTargetDependency */,
+			);
+			name = "PlankGrid WatchKit App";
+			productName = "PlankGrid WatchKit App";
+			productReference = 7A4FE2BB2103BA5C00A173D6 /* PlankGrid WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7A4FE2C92103BA5D00A173D6 /* PlankGrid WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4FE2DD2103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid WatchKit Extension" */;
+			buildPhases = (
+				7A4FE2C62103BA5D00A173D6 /* Sources */,
+				7A4FE2C72103BA5D00A173D6 /* Frameworks */,
+				7A4FE2C82103BA5D00A173D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PlankGrid WatchKit Extension";
+			productName = "PlankGrid WatchKit Extension";
+			productReference = 7A4FE2CA2103BA5D00A173D6 /* PlankGrid WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A4FE28B2103BA5700A173D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = PlanGrid;
+				TargetAttributes = {
+					7A4FE2922103BA5700A173D6 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					7A4FE2A62103BA5C00A173D6 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 7A4FE2922103BA5700A173D6;
+					};
+					7A4FE2B12103BA5C00A173D6 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 7A4FE2922103BA5700A173D6;
+					};
+					7A4FE2BA2103BA5C00A173D6 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					7A4FE2C92103BA5D00A173D6 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 7A4FE28E2103BA5700A173D6 /* Build configuration list for PBXProject "PlankGrid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A4FE28A2103BA5700A173D6;
+			productRefGroup = 7A4FE2942103BA5700A173D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A4FE2922103BA5700A173D6 /* PlankGrid */,
+				7A4FE2A62103BA5C00A173D6 /* PlankGridTests */,
+				7A4FE2B12103BA5C00A173D6 /* PlankGridUITests */,
+				7A4FE2BA2103BA5C00A173D6 /* PlankGrid WatchKit App */,
+				7A4FE2C92103BA5D00A173D6 /* PlankGrid WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A4FE2912103BA5700A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2A12103BA5C00A173D6 /* LaunchScreen.storyboard in Resources */,
+				7A4FE29E2103BA5C00A173D6 /* Assets.xcassets in Resources */,
+				7A4FE29C2103BA5700A173D6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2A52103BA5C00A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2B02103BA5C00A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2B92103BA5C00A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2C42103BA5C00A173D6 /* Assets.xcassets in Resources */,
+				7A4FE2C22103BA5C00A173D6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2C82103BA5D00A173D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2D82103BA5D00A173D6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A4FE28F2103BA5700A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2992103BA5700A173D6 /* ViewController.swift in Sources */,
+				7A4FE2972103BA5700A173D6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2A32103BA5C00A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2AC2103BA5C00A173D6 /* PlankGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2AE2103BA5C00A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2B72103BA5C00A173D6 /* PlankGridUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4FE2C62103BA5D00A173D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4FE2D42103BA5D00A173D6 /* NotificationController.swift in Sources */,
+				7A4FE2D62103BA5D00A173D6 /* ComplicationController.swift in Sources */,
+				7A4FE2D22103BA5D00A173D6 /* ExtensionDelegate.swift in Sources */,
+				7A4FE2D02103BA5D00A173D6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A4FE2A92103BA5C00A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A4FE2922103BA5700A173D6 /* PlankGrid */;
+			targetProxy = 7A4FE2A82103BA5C00A173D6 /* PBXContainerItemProxy */;
+		};
+		7A4FE2B42103BA5C00A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A4FE2922103BA5700A173D6 /* PlankGrid */;
+			targetProxy = 7A4FE2B32103BA5C00A173D6 /* PBXContainerItemProxy */;
+		};
+		7A4FE2BE2103BA5C00A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A4FE2BA2103BA5C00A173D6 /* PlankGrid WatchKit App */;
+			targetProxy = 7A4FE2BD2103BA5C00A173D6 /* PBXContainerItemProxy */;
+		};
+		7A4FE2CD2103BA5D00A173D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A4FE2C92103BA5D00A173D6 /* PlankGrid WatchKit Extension */;
+			targetProxy = 7A4FE2CC2103BA5D00A173D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A4FE29A2103BA5700A173D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A4FE29B2103BA5700A173D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A4FE29F2103BA5C00A173D6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A4FE2A02103BA5C00A173D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7A4FE2C02103BA5C00A173D6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A4FE2C12103BA5C00A173D6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A4FE2DB2103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A4FE2DC2103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A4FE2DE2103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = "PlankGrid WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		7A4FE2DF2103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = "PlankGrid WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		7A4FE2E22103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				IBSC_MODULE = PlankGrid_WatchKit_Extension;
+				INFOPLIST_FILE = "PlankGrid WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		7A4FE2E32103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				IBSC_MODULE = PlankGrid_WatchKit_Extension;
+				INFOPLIST_FILE = "PlankGrid WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		7A4FE2E62103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A4FE2E72103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A4FE2E92103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlankGrid.app/PlankGrid";
+			};
+			name = Debug;
+		};
+		7A4FE2EA2103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlankGrid.app/PlankGrid";
+			};
+			name = Release;
+		};
+		7A4FE2EC2103BA5D00A173D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlankGrid;
+			};
+			name = Debug;
+		};
+		7A4FE2ED2103BA5D00A173D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29VP5K5AJ7;
+				INFOPLIST_FILE = PlankGridUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.plangrid.PlankGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlankGrid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A4FE28E2103BA5700A173D6 /* Build configuration list for PBXProject "PlankGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2DB2103BA5D00A173D6 /* Debug */,
+				7A4FE2DC2103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4FE2DD2103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2DE2103BA5D00A173D6 /* Debug */,
+				7A4FE2DF2103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4FE2E12103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2E22103BA5D00A173D6 /* Debug */,
+				7A4FE2E32103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4FE2E52103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2E62103BA5D00A173D6 /* Debug */,
+				7A4FE2E72103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4FE2E82103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2E92103BA5D00A173D6 /* Debug */,
+				7A4FE2EA2103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A4FE2EB2103BA5D00A173D6 /* Build configuration list for PBXNativeTarget "PlankGridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4FE2EC2103BA5D00A173D6 /* Debug */,
+				7A4FE2ED2103BA5D00A173D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A4FE28B2103BA5700A173D6 /* Project object */;
+}
