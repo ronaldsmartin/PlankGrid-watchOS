@@ -33,10 +33,10 @@ final class TimerManager {
     // MARK: Source info
 
     var sources = [
-        TimerDescription(name: "👐 Basic", duration: 20),
-        TimerDescription(name: "👈 Left", duration: 20),
-        TimerDescription(name: "👉 Right", duration: 20),
-        TimerDescription(name: "💺 Wall Sit", duration: 20),
+        TimerDescription(name: "👐 Basic", duration: 65),
+        TimerDescription(name: "👈 Left", duration: 45),
+        TimerDescription(name: "👉 Right", duration: 45),
+        TimerDescription(name: "💺 Wall Sit", duration: 65),
     ]
 
     private(set) var currentSourceIndex = 0 {
