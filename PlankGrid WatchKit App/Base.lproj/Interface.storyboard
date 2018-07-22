@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14295.6" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch42" orientation="portrait">
+    <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,41 +16,73 @@
                     <items>
                         <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="Hfd-Dg-TE0">
                             <items>
-                                <label alignment="center" text="Basic" minimumScaleFactor="0.69999999999999996" id="9R1-W2-i0m">
-                                    <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
-                                </label>
-                                <group width="1" alignment="left" layout="overlap" id="dkk-2c-igU">
+                                <group width="1" height="0.75" alignment="center" layout="overlap" id="dkk-2c-igU">
                                     <items>
-                                        <spriteKitScene width="1" height="1" alignment="center" verticalAlignment="center" id="pmV-bW-tKw"/>
-                                        <timer alignment="center" verticalAlignment="center" format="abbreviated" previewedSeconds="65" id="oy4-q4-S4H">
-                                            <calendarUnit key="units" minute="YES" second="YES"/>
-                                        </timer>
+                                        <label alignment="center" verticalAlignment="center" text="65" id="n9Q-O3-otM">
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="60"/>
+                                        </label>
+                                        <group width="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" id="zER-hZ-Efo" userLabel="Empty State Group">
+                                            <items>
+                                                <label alignment="center" text="No timers added" id="csZ-H5-EWU">
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </label>
+                                                <label alignment="center" text="Add timers using the PlankGrid iPhone app." textAlignment="left" numberOfLines="0" id="6Hi-dD-w6B">
+                                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
-                                <label alignment="center" text="1 of 4" id="dht-Re-yEe">
-                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                </label>
+                                <group width="1" alignment="left" layout="vertical" id="dss-A7-u5d" userLabel="Source Description Group">
+                                    <items>
+                                        <label alignment="center" text="Basic" minimumScaleFactor="0.69999999999999996" id="9R1-W2-i0m">
+                                            <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                        </label>
+                                        <label alignment="center" text="1 of 4" id="dht-Re-yEe">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                             <gestureRecognizers>
-                                <tapGestureRecognizer id="99u-Z5-3zQ">
+                                <tapGestureRecognizer id="99u-Z5-3zQ" userLabel="Start/Stop Gesture Recognizer">
                                     <connections>
                                         <action selector="toggleRunning:" destination="AgC-eL-Hgc" id="LOT-Lg-1gx"/>
                                     </connections>
                                 </tapGestureRecognizer>
-                                <longPressGestureRecognizer id="UbU-Pc-q2s">
+                                <longPressGestureRecognizer id="UbU-Pc-q2s" userLabel="Reset Gesture Recognizer">
                                     <connections>
                                         <action selector="reset:" destination="AgC-eL-Hgc" id="enx-Ok-aRb"/>
                                     </connections>
                                 </longPressGestureRecognizer>
+                                <swipeGestureRecognizer id="NLU-DM-44g" userLabel="Previous Swipe Gesture">
+                                    <precedingGestureRecognizers>
+                                        <tapGestureRecognizer reference="99u-Z5-3zQ"/>
+                                        <longPressGestureRecognizer reference="UbU-Pc-q2s"/>
+                                    </precedingGestureRecognizers>
+                                    <connections>
+                                        <action selector="previousTimer:" destination="AgC-eL-Hgc" id="D7O-AI-P0I"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="yQJ-NW-s9G" userLabel="Next Swipe Gesture">
+                                    <precedingGestureRecognizers>
+                                        <tapGestureRecognizer reference="99u-Z5-3zQ"/>
+                                        <longPressGestureRecognizer reference="UbU-Pc-q2s"/>
+                                    </precedingGestureRecognizers>
+                                    <connections>
+                                        <action selector="nextTimer:" destination="AgC-eL-Hgc" id="PJd-Zz-QKp"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
                             </gestureRecognizers>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="countdownScene" destination="pmV-bW-tKw" id="ZRq-5B-hGj"/>
+                        <outlet property="emptyStateGroup" destination="zER-hZ-Efo" id="C0g-Jh-5ze"/>
                         <outlet property="progressGroup" destination="dkk-2c-igU" id="1bc-Sg-KSq"/>
                         <outlet property="progressLabel" destination="dht-Re-yEe" id="3ur-oq-64r"/>
-                        <outlet property="timerLabel" destination="oy4-q4-S4H" id="4wQ-RS-3Sw"/>
+                        <outlet property="sourceDescriptionGroup" destination="dss-A7-u5d" id="ind-P0-Wg8"/>
+                        <outlet property="timeLabel" destination="n9Q-O3-otM" id="FHQ-zT-Tqa"/>
                         <outlet property="titleLabel" destination="9R1-W2-i0m" id="7KD-Lh-jto"/>
                     </connections>
                 </controller>
