@@ -1,14 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14295.6" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14234.1"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PlankGrid_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="Hfd-Dg-TE0">
+                            <items>
+                                <label alignment="center" text="Basic" minimumScaleFactor="0.69999999999999996" id="9R1-W2-i0m">
+                                    <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="26"/>
+                                </label>
+                                <group width="1" alignment="left" layout="overlap" id="dkk-2c-igU">
+                                    <items>
+                                        <spriteKitScene width="1" height="1" alignment="center" verticalAlignment="center" id="pmV-bW-tKw"/>
+                                        <timer alignment="center" verticalAlignment="center" format="abbreviated" previewedSeconds="65" id="oy4-q4-S4H">
+                                            <calendarUnit key="units" minute="YES" second="YES"/>
+                                        </timer>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="1 of 4" id="dht-Re-yEe">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="99u-Z5-3zQ">
+                                    <connections>
+                                        <action selector="toggleRunning:" destination="AgC-eL-Hgc" id="LOT-Lg-1gx"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                                <longPressGestureRecognizer id="UbU-Pc-q2s">
+                                    <connections>
+                                        <action selector="reset:" destination="AgC-eL-Hgc" id="enx-Ok-aRb"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="countdownScene" destination="pmV-bW-tKw" id="ZRq-5B-hGj"/>
+                        <outlet property="progressGroup" destination="dkk-2c-igU" id="1bc-Sg-KSq"/>
+                        <outlet property="progressLabel" destination="dht-Re-yEe" id="3ur-oq-64r"/>
+                        <outlet property="timerLabel" destination="oy4-q4-S4H" id="4wQ-RS-3Sw"/>
+                        <outlet property="titleLabel" destination="9R1-W2-i0m" id="7KD-Lh-jto"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +76,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="PlankGrid_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
