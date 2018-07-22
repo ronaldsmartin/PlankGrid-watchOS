@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A26B157210428AC003A1106 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26B156210428AC003A1106 /* TimerManager.swift */; };
+		7A26B158210428AC003A1106 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26B156210428AC003A1106 /* TimerManager.swift */; };
 		7A4FE2972103BA5700A173D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2962103BA5700A173D6 /* AppDelegate.swift */; };
 		7A4FE2992103BA5700A173D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2982103BA5700A173D6 /* ViewController.swift */; };
 		7A4FE29C2103BA5700A173D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE29A2103BA5700A173D6 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		7A4FE2D42103BA5D00A173D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D32103BA5D00A173D6 /* NotificationController.swift */; };
 		7A4FE2D62103BA5D00A173D6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D52103BA5D00A173D6 /* ComplicationController.swift */; };
 		7A4FE2D82103BA5D00A173D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4FE2D72103BA5D00A173D6 /* Assets.xcassets */; };
+		7A7CC5AF21043AF2009FFA9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7CC5AE21043AF2009FFA9A /* Foundation.framework */; };
+		7A7CC5B121043AFD009FFA9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7CC5B021043AFD009FFA9A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A26B156210428AC003A1106 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		7A4FE2932103BA5700A173D6 /* PlankGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlankGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4FE2962103BA5700A173D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A4FE2982103BA5700A173D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +112,8 @@
 		7A4FE2D72103BA5D00A173D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A4FE2D92103BA5D00A173D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4FE2DA2103BA5D00A173D6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7A7CC5AE21043AF2009FFA9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A7CC5B021043AFD009FFA9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7CC5AF21043AF2009FFA9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +143,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7CC5B121043AFD009FFA9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A26B1552104286A003A1106 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A26B156210428AC003A1106 /* TimerManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7A4FE28A2103BA5700A173D6 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +167,7 @@
 				7A4FE2BF2103BA5C00A173D6 /* PlankGrid WatchKit App */,
 				7A4FE2CE2103BA5D00A173D6 /* PlankGrid WatchKit Extension */,
 				7A4FE2942103BA5700A173D6 /* Products */,
+				7A7CC5AD21043AF1009FFA9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +186,7 @@
 		7A4FE2952103BA5700A173D6 /* PlankGrid */ = {
 			isa = PBXGroup;
 			children = (
+				7A26B1552104286A003A1106 /* Model */,
 				7A4FE2962103BA5700A173D6 /* AppDelegate.swift */,
 				7A4FE2982103BA5700A173D6 /* ViewController.swift */,
 				7A4FE29A2103BA5700A173D6 /* Main.storyboard */,
@@ -218,6 +237,15 @@
 				7A4FE2DA2103BA5D00A173D6 /* PushNotificationPayload.apns */,
 			);
 			path = "PlankGrid WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7A7CC5AD21043AF1009FFA9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A7CC5B021043AFD009FFA9A /* Foundation.framework */,
+				7A7CC5AE21043AF2009FFA9A /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A26B157210428AC003A1106 /* TimerManager.swift in Sources */,
 				7A4FE2992103BA5700A173D6 /* ViewController.swift in Sources */,
 				7A4FE2972103BA5700A173D6 /* AppDelegate.swift in Sources */,
 			);
@@ -438,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4FE2D42103BA5D00A173D6 /* NotificationController.swift in Sources */,
+				7A26B158210428AC003A1106 /* TimerManager.swift in Sources */,
 				7A4FE2D62103BA5D00A173D6 /* ComplicationController.swift in Sources */,
 				7A4FE2D22103BA5D00A173D6 /* ExtensionDelegate.swift in Sources */,
 				7A4FE2D02103BA5D00A173D6 /* InterfaceController.swift in Sources */,
@@ -500,6 +530,7 @@
 		7A4FE2DB2103BA5D00A173D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -560,6 +591,7 @@
 		7A4FE2DC2103BA5D00A173D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
