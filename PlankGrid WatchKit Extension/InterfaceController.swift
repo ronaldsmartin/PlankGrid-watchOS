@@ -6,17 +6,19 @@
 //  Copyright © 2018 PlanGrid. All rights reserved.
 //
 
-import WatchKit
 import Foundation
+import HealthKit
+import WatchKit
 
 final class InterfaceController: WKInterfaceController {
 
-    private var timerManager = TimerManager.shared
+    private let timerManager = TimerManager()
+    private let healthKitStore = HKHealthStore()
+    private var workout: HKWorkoutSession?
 
     // MARK: Outlets
 
     @IBOutlet private var progressGroup: WKInterfaceGroup!
-    @IBOutlet private var countdownScene: WKInterfaceSKScene!
     @IBOutlet private var timeLabel: WKInterfaceLabel!
 
     @IBOutlet private var sourceDescriptionGroup: WKInterfaceGroup!
@@ -31,12 +33,16 @@ final class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        setupTimerView()
+        timerManager.progressDelegate = self
+    }
+
+    private func setupTimerView() {
         if let timer = timerManager.currentSource {
             resetLabels(with: timer)
         } else {
             showEmptyState()
         }
-        timerManager.progressDelegate = self
     }
 
     private func showEmptyState() {
@@ -87,12 +93,33 @@ final class InterfaceController: WKInterfaceController {
 extension InterfaceController: TimerProgressDelegate {
     func manager(_ manager: TimerManager, started timer: TimerManager.TimerDescription) {
         print("Started timer: \(timer)")
+
         WKInterfaceDevice.current().play(.start)
+
+        if workout == nil {
+            startWorkout()
+        }
+    }
+
+    private func startWorkout() {
+        let config = HKWorkoutConfiguration()
+        config.locationType = .indoor
+        config.activityType = .coreTraining
+
+        let session = try! HKWorkoutSession(configuration: config)
+        defer { workout = session }
+        session.delegate = self
+        healthKitStore.start(session)
     }
 
     func manager(_ manager: TimerManager, stopped timer: TimerManager.TimerDescription) {
         print("Stopped timer: \(timer)")
+
         WKInterfaceDevice.current().play(.stop)
+
+        if let workout = workout {
+            healthKitStore.pause(workout)
+        }
     }
 
     func manager(
@@ -114,6 +141,7 @@ extension InterfaceController: TimerProgressDelegate {
         case 0...5:
             // "5, 4, 3, 2, 1..."
             WKInterfaceDevice.current().play(.click)
+            timeLabel.setTextColor(.green)
         default:
             break
         }
@@ -123,9 +151,27 @@ extension InterfaceController: TimerProgressDelegate {
     func manager(_ manager: TimerManager, finished timer: TimerManager.TimerDescription) {
         print("Finished timer: \(timer)")
         WKInterfaceDevice.current().play(.success)
+
+        if manager.sources.last == timer,
+            let workout = workout {
+            healthKitStore.end(workout)
+            self.workout = nil
+        }
     }
 
     func manager(_ manager: TimerManager, movedTo timer: TimerManager.TimerDescription) {
         resetLabels(with: timer)
+    }
+}
+
+// MARK: - HKWorkoutSessionDelegate
+extension InterfaceController: HKWorkoutSessionDelegate {
+
+    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+        print("State change from \(fromState) to \(toState) on \(date)")
+    }
+
+    func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
+        print("\(error)")
     }
 }

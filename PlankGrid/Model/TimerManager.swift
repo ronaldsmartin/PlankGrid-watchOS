@@ -26,8 +26,6 @@ protocol TimerProgressDelegate: class {
 // MARK: - TimerManager
 final class TimerManager {
 
-    static let shared = TimerManager()
-
     weak var progressDelegate: TimerProgressDelegate?
 
     // MARK: Source info
@@ -157,7 +155,7 @@ final class TimerManager {
 // MARK: - TimerSource
 
 extension TimerManager {
-    struct TimerDescription {
+    struct TimerDescription: Equatable {
         let id = UUID()
         let name: String
         let duration: TimeInterval
